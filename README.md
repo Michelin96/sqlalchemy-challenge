@@ -19,7 +19,7 @@ The avaibale routes are:
 
 The range of data is from 2010-01-01 to 2017-08-23.  
 
-"Preciptaion" gives a list of the date and the percipition measuerment for that day.
+"Precipitaion" gives a list of the date and the percipition measuerment for that day.
 
 "Stations" gives a list of all the measurement staions.
 
