@@ -52,13 +52,14 @@ def precipitation():
 
     """Return a list of dates and precipitation"""
     # Query all dates and preciptation
-    results = session.query(Measurement.date, Measurement.prcp).order_by(Measurement.date).all()
+    results = session.query(Measurement.station, Measurement.date, Measurement.prcp).order_by(Measurement.date).all()
 
     session.close()
     
     all_prcp= []
-    for date, prcp in results:
+    for station, date, prcp in results:
         prcp_dict = {}
+        prcp_dict["station"] = station
         prcp_dict[date] = prcp
         all_prcp.append(prcp_dict)
 
